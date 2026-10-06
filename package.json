@@ -1,0 +1,26 @@
+{
+  "name": "hubspot-crm-migration",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Migrate HubSpot CRM data into the internal Postgres CRM",
+  "scripts": {
+    "migrate": "ts-node src/migrate.ts",
+    "import": "ts-node src/import.ts",
+    "verify": "ts-node src/verify.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.20.0",
+    "dotenv": "^18.0.5",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/pg": "^8.23.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

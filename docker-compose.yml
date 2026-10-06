@@ -1,0 +1,14 @@
+# Local Postgres for development / trial imports: `docker compose up -d`
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: crm
+      POSTGRES_PASSWORD: crm
+      POSTGRES_DB: crm
+    ports:
+      - "5432:5432"
+    volumes:
+      - crm-data:/var/lib/postgresql/data
+volumes:
+  crm-data:
